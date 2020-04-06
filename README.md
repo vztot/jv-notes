@@ -117,7 +117,7 @@ byte b = 127;               // 1 byte; from -128 to 127
 short s = 1123;             // 2 byte; from -32768 to 32767
 char c = 65;                // 2 bytes; from -32768 to 32767; is similar to "char c = 'A';" and "char c = 65 + 32;" is similar to "char c = 'a';"  
 int i = 2_000_000_000;      // 4 bytes; from -2147483648 to 2147483647; u can use "_" whenever except of ending and begining
-long l = 12321312321312L;   // 8 bytes; from -9223372036854775808L to 9223372036854775807L;i postfix "L" or "l" mean literals of type long; we use upper-case because of Google Style
+long l = 12321312321312L;   // 8 bytes; from -9223372036854775808L to 9223372036854775807L; postfix "L" or "l" mean literals of type long; we use upper-case because of Google Style
 
 // float pointing types
 float f = 17.08F;           // 4 bytes; from 1.4e-45f to 3.4e+38f always with "F" or "f" at the end.
