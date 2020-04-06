@@ -1,6 +1,6 @@
 # Java Notes
 
-This topic will consist of most relevant java notes imho.
+This notes was made for better understanding 
 
 ## TODO List
 
