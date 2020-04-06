@@ -123,11 +123,11 @@ long l = 12321312321312L;   // 8 bytes; from -9223372036854775808L to 9223372036
 float f = 17.08F;           // 4 bytes; from 1.4e-45f to 3.4e+38f always with "F" or "f" at the end.
 double d = 77.99;           // 8 bytes; from 4.9e-324 to 1.7e+308; java double is IEEE 754 standard comliant
 
-// some notations
+// some other notations
 int k = 0b111010;           // binary notation
 int m = 012;                // octal notation
-int n = 0xCAFE;             // hexademical notation
-int n = 0xCAFE_DEAL;        // with literal
+int n = 0xCAFE;             // hexadecimal notation
+int n = 0xCAFE_DEAL;        // hexadecimal with literal
 ```
 
 ### Wrappers
@@ -139,10 +139,9 @@ Basically, generic classes only work with objects and don't support primitives. 
 
 Other source says that wrappers was created because data structures in java (ArrayList, HashMap etc.) can store only the objects and plus the object is needed to support synchronization in multithreading.
 
-Wrapper examples:
+Wrapper initialization:
 
 ```java
-// wrapper objects
 Boolean b = true;
 Short s = 32_000;
 Character c = 'c';
