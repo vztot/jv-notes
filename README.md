@@ -4,13 +4,14 @@ This topic will consist of most relevant java notes imho.
 
 ## TODO List
 
+- [ ] Anchor Navigation For This Document
 - [x] Relevant Java Links
 - [x] GIT
 - [x] Maven
 - [x] Google Java Style Guide
 - [x] Java History and Philosophy
 - [ ] Primitives and wrappers. Autoboxing
-- [ ] Quick type converting
+- [ ] Quick Converting
 - [ ] String vs StringBuilder
 - [ ] OOP
 - [ ] Exceptions
@@ -85,11 +86,11 @@ mvn package
 
 ## Java History and Philosophy
 
-**History**
+### History
 
 Java was started as a project called "Oak" by James Gosling in June 1991. Gosling's goals were to implement a virtual machine and a language that had a familiar C-like notation but with greater uniformity and simplicity than C/C++. The first public implementation was Java 1.0 in 1995. It made the promise of "Write Once, Run Anywhere", with free runtimes on popular platforms. It was fairly secure and its security was configurable, allowing for network and file access to be limited. The major web browsers soon incorporated it into their standard configurations in a secure "applet" configuration. popular quickly. New versions for large and small platforms (J2EE and J2ME) soon were designed with the advent of "Java 2". Sun has not announced any plans for a "Java 3".
 
-**Philosophy**
+### Philosophy
 
 There were five primary goals in the creation of the Java language:
 1. It should use the object-oriented programming methodology.
@@ -100,10 +101,16 @@ There were five primary goals in the creation of the Java language:
 
 ## Primitives and wrappers. Autoboxing
 
-**Primitives**
+### Primitives
+
+**They're stored on the stack.**
+
+The eight primitives defined in Java are int, byte, short, long, float, double, boolean, and char – those aren't considered objects and represent raw values:
+
 
 ```java
 // integer types
+boolean bool = true;        // boolean size is virtual machine dependent
 byte b = 127;               // 1 byte; from -128 to 127 
 short s = 1123;             // 2 byte; from -32768 to 32767
 char c = 65;                // 2 bytes; from -32768 to 32767; is similar to "char c = 'A';" and "char c = 65 + 32;" is similar to "char c = 'a';"  
@@ -111,6 +118,75 @@ int i = 2_000_000_000;      // 4 bytes; from -2147483648 to 2147483647; u can us
 long l = 12321312321312L;   // 8 bytes; from -9223372036854775808L to 9223372036854775807L;i postfix "L" or "l" mean literals of type long; we use upper-case because of Google Style
 
 // float pointing types
-float f = 17.08F            // 4 bytes; from 1.4e-45f to 3.4e+38f
-double d = 77.99            // 8 bytes; from 4.9e-324 to 1.7e+308
+float f = 17.08F;           // 4 bytes; from 1.4e-45f to 3.4e+38f always with "F" or "f" at the end.
+double d = 77.99;           // 8 bytes; from 4.9e-324 to 1.7e+308; java double is IEEE 754 standard comliant
+
+// some notations
+int k = 0b111010;           // binary notation
+int m = 012;                // octal notation
+int n = 0xCAFE;             // hexademical notation
+int n = 0xCAFE_DEAL;        // with literal
 ```
+
+### Wrappers
+
+**They're stored in the heap.**
+
+Wrapper classes are objects encapsulating primitive Java types. Each Java primitive has a corresponding wrapper.
+Basically, generic classes only work with objects and don't support primitives. As a result, if we want to work with them, we have to convert primitive values into wrapper objects.
+
+Other source says that wrappers was created because data structures in java (ArrayList, HashMap etc.) can store only the objects and plus the object is needed to support synchronization in multithreading.
+
+Wrapper examples:
+
+```java
+// wrapper objects
+Boolean b = true;
+Short s = 32_000;
+Character c = 'c';
+Integer i = 0b00001;
+Long l = 12312321211L;
+Float f = 1212.2f;
+```
+
+### Primitive to Primitive Conversions
+
+When we need to convert from a primitive that is simpler or smaller than the destination type, we don't have to use any special notation for that
+```java
+int myInt = 127;
+long myLong = myInt;
+```
+During widening conversion, the smaller primitive value is placed over a larger container, which means that all the extra space, on the left of the value, is filled with zeros. This may also be used to go from the integer group to the floating point
+
+```java
+float myFloat = myLong;
+double myDouble = myLong;
+```
+This is possible because the moving to a wider primitive does not lose any information.
+
+Sometimes we need to fit a value that is larger than the type used in the variable declaration. This may result in information loss since some bytes will have to be discarded.
+
+In this case, we have to explicitly express that we are aware of the situation and we agree with that, by using a cast:
+
+
+```java
+int myInt = (int) myDouble;
+byte myByte = (byte) myInt;
+```
+
+
+### Primitive to Wrapper Class Conversion
+
+We can either use constructor or static factory methods to convert a primitive value to an object of a wrapper class
+
+```java
+Integer object = new Integer(1);
+Integer anotherObject = Integer.valueOf(1);
+
+int a = object.intValue();
+int b = anotherObject.intValue();
+```
+
+### Autoboxing and Unboxing
+
+**After Java 5**, this conversion can be done automatically by using features called autoboxing and unboxing.
