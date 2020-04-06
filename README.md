@@ -27,6 +27,8 @@ This topic will consist of most relevant java notes imho.
 
 ## Relevant Java Links
 
+[Java Docs 11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
+
 [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/)
 
 [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html)
