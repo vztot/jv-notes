@@ -11,19 +11,34 @@ This notes was made for better understanding
 - [x] Google Java Style Guide
 - [x] Java History and Philosophy
 - [ ] Primitives and wrappers. Autoboxing
+- [ ] Arrays
 - [ ] Quick Converting
 - [ ] String vs StringBuilder
 - [ ] OOP
+- [ ] Static Classes, Static Methods, Static Variables
 - [ ] Exceptions
 - [ ] Abstract Classes vs Interfaces
 - [ ] Build Pattern
+- [ ] Java NIO vs IO
+- [ ] RegEx
 - [ ] Cloneable
-- [ ] Java NIO vs. IO
 - [ ] Equals
 - [ ] HashCode
-- [ ] RegEx
 - [ ] Generics
-- [ ] And many others...
+- [ ] Wildcard
+- [ ] PECS
+- [ ] ArrayList
+- [ ] LinkedList
+- [ ] Immutable class
+- [ ] HashMap
+- [ ] TreeMap
+- [ ] Comparator
+- [ ] Set
+- [ ] TreeSet
+- [ ] Queue
+- [ ] Stack
+- [ ] Collection Framework
+- [ ] To be continue...
 
 ## Relevant Java Links
 
