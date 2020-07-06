@@ -4,6 +4,7 @@ This notes was made for better understanding
 
 ## TODO List
 
+### Java Core
 - [ ] Anchor Navigation For This Document
 - [x] Relevant Java Links
 - [x] GIT
@@ -33,12 +34,120 @@ This notes was made for better understanding
 - [ ] HashMap
 - [ ] TreeMap
 - [ ] Comparator
+- [ ] Iterator
 - [ ] Set
 - [ ] TreeSet
 - [ ] Queue
 - [ ] Stack
 - [ ] Collection Framework
-- [ ] To be continue...
+- [ ] Optional
+- [ ] Anonymous class
+- [ ] Functional interfaces
+- [ ] Lambda
+- [ ] Method reference
+- [ ] Stream API
+- [ ] Iterate and Generate
+- [ ] Parallel Streams
+- [ ] DateTime API
+- [ ] Reflection API
+
+### Servlets
+- [ ] Servlet
+- [ ] Server
+- [ ] Model, View, Controlled and DAO
+- [ ] Tomcat
+- [ ] Web.xml
+- [ ] JSP
+- [ ] Request Dispatcher
+- [ ] Http Methods
+- [ ] GET
+- [ ] POST
+- [ ] Http Codes
+- [ ] JSTL
+- [ ] Security in Web
+- [ ] Authentication and Authorization
+- [ ] RBAC vs ABAC
+- [ ] Cookies
+- [ ] Filters
+- [ ] HttpSession
+
+### JDBC & SQL
+- [ ] SQL vs NoSQL
+- [ ] SQL basics
+- [ ] JDBC
+- [ ] JDBC driver
+- [ ] DB connection
+- [ ] MySQL connection example
+- [ ] Password hashing
+
+### Hibernate
+- [ ] JPA
+- [ ] ORM
+- [ ] What is Hibernate?
+- [ ] Session and SessionFactory
+- [ ] Entity annotations
+- [ ] CriteriaQuery
+- [ ] HQL
+- [ ] Hibernate.cfg.xml
+- [ ] Entity states
+- [ ] Relationships
+- [ ] Cascade
+- [ ] LazyInitializationException
+- [ ] Transaction
+- [ ] ACID
+- [ ] Isolation levels
+- [ ] JPA proxy object
+- [ ] N+1 problem
+- [ ] Cache levels
+- [ ] JPA inheritance
+- [ ] Transient annotation
+- [ ] Annotations
+
+### Spring
+- [ ] AoP
+- [ ] IoC
+- [ ] DI
+- [ ] ApplicationContext
+- [ ] Beans
+- [ ] Bean Lifecycle
+- [ ] Autowiring
+- [ ] Circular Dependency
+- [ ] Primary and Qualifier
+- [ ] DataSource configuration
+- [ ] Properties file
+- [ ] Spring Web MVC
+- [ ] View resolver
+- [ ] Controller and RestController
+- [ ] Bean scope
+- [ ] What is REST?
+- [ ] REST vs SOAP
+- [ ] What is Spring Security
+- [ ] Security Configuration
+- [ ] SecurityContext
+
+- [ ] Annotations
+
+### Advanced
+- [ ] Binary operations
+- [ ] Big O
+- [ ] Basic algorithms in Java
+- [ ] JUnit
+- [ ] Log4j
+
+### Patterns and Principles
+- [ ] PECS
+- [ ] DAO
+- [ ] CRUD
+- [ ] MVC
+- [ ] SOLID
+- [ ] ACID
+- [ ] DTO
+- [ ] REST
+- [ ] SOAP
+
+### Additional environment
+- [ ] MySQL Workbench
+- [ ] Postman
 
 ## Relevant Java Links
 
