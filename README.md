@@ -124,7 +124,6 @@ This notes was made for better understanding
 - [ ] What is Spring Security
 - [ ] Security Configuration
 - [ ] SecurityContext
-
 - [ ] Annotations
 
 ### Advanced
