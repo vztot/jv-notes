@@ -132,6 +132,7 @@ This notes was made for better understanding
 - [ ] Basic algorithms in Java
 - [ ] JUnit
 - [ ] Log4j
+- [ ] TCP vs UDP
 
 ### Patterns and Principles
 - [ ] PECS
@@ -250,7 +251,7 @@ double d = 77.99;           // 8 bytes; from 4.9e-324 to 1.7e+308; java double i
 int k = 0b111010;           // binary notation
 int m = 012;                // octal notation
 int n = 0xCAFE;             // hexadecimal notation
-int n = 0xCAFE_DEAL;        // hexadecimal with literal
+long l = 0xCAFE_DEAL;        // hexadecimal with literal
 ```
 
 ### Wrappers
