@@ -175,6 +175,7 @@ These notes was made for better understanding of java
 - [ ] Swagger
 - [ ] H2
 
+## Java Core
 
 ## java-history-and-philosophy
 
