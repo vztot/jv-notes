@@ -11,7 +11,7 @@ This notes was made for better understanding
 - [x] Maven
 - [x] Google Java Style Guide
 - [x] Java History and Philosophy
-- [ ] Primitives and wrappers. Autoboxing
+- [x] Primitives and wrappers. Autoboxing
 - [ ] Arrays
 - [ ] Quick Converting
 - [ ] String vs StringBuilder
@@ -50,6 +50,20 @@ This notes was made for better understanding
 - [ ] Parallel Streams
 - [ ] DateTime API
 - [ ] Reflection API
+- [ ] Multithreading
+- [ ] Synchronized block
+- [ ] Deadlock
+- [ ] Deadlock
+- [ ] Volatile
+- [ ] Mutex
+- [ ] Monitor
+- [ ] Semaphore
+- [ ] Runnable
+- [ ] Callable
+- [ ] ExecutorService
+- [ ] ForkJoin
+- [ ] java.util.concurrent.*
+- [ ] Atomics
 
 ### Servlets
 - [ ] Servlet
@@ -121,9 +135,11 @@ This notes was made for better understanding
 - [ ] Bean scope
 - [ ] What is REST?
 - [ ] REST vs SOAP
-- [ ] What is Spring Security
+- [ ] Spring Security
 - [ ] Security Configuration
 - [ ] SecurityContext
+- [ ] Spring Boot
+- [ ] Spring Data
 - [ ] Annotations
 
 ### Advanced
@@ -138,9 +154,12 @@ This notes was made for better understanding
 - [ ] PECS
 - [ ] DAO
 - [ ] CRUD
+- [ ] MVP
 - [ ] MVC
 - [ ] SOLID
 - [ ] ACID
+- [ ] IoC
+- [ ] DI
 - [ ] DTO
 - [ ] REST
 - [ ] SOAP
@@ -148,6 +167,8 @@ This notes was made for better understanding
 ### Additional environment
 - [ ] MySQL Workbench
 - [ ] Postman
+- [ ] Swagger
+- [ ] H2
 
 ## Relevant Java Links
 
@@ -176,21 +197,24 @@ File **.gitignore**:
 ```
 .idea/*
 target/*
+out/*
+logs/*
 *.iml
 ```
 
 Relevant git commands: 
 
-```
-git --version
-git remote
-git remote add reponame https://repository.com/address.git
-git checkout -b branchname
-git commit -am "commit msg"
-git push reponame branchname
-git add .
-git rm -r --cached
-```
+|command|description|
+|---|---|
+|`git --version`|prints git version|
+|`git init`|add git to a project|
+|`git add .`|add all files of a project to git|
+|`git remote add reponame https://repository.com/address.git`|add new tracked repo|
+|`git remote`|prints set of tracked repos|
+|`git checkout -b branchname`|checkout to new branch "branchname"|
+|`git commit -am "commit msg"`|make a commit|
+|`git push reponame branchname`|push to tracked repo|
+|`git rm -r --cached`|remove git|
 
 ## Maven
 
@@ -314,4 +338,131 @@ int b = anotherObject.intValue();
 
 ### Autoboxing and Unboxing
 
-**After Java 5**, this conversion can be done automatically by using features called autoboxing and unboxing.
+**After Java 5**. Autoboxing is the automatic conversion that the Java compiler makes between the
+ primitive types and their corresponding object wrapper classes. If the conversion goes the other way, this is called unboxing.
+ 
+ Here is the simplest example of autoboxing:
+```
+Character ch = 'a';
+```
+
+And another one:
+
+```
+List<Integer> list = new ArrayList<>();
+        for (int i = 1; i < 50; i += 2) {
+            list.add(i);
+        }
+```
+
+Thus, the compiler converts the previous code to the following at runtime:
+
+```
+List<Integer> list = new ArrayList<>();
+       for (int i = 1; i < 50; i += 2) {
+           list.add(Integer.valueOf(i));
+       }
+```
+
+Converting a primitive value (an int, for example) into an object of the corresponding wrapper class (Integer) is called autoboxing. The Java compiler applies autoboxing when a primitive value is:
+
+* Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+* Assigned to a variable of the corresponding wrapper class.
+
+Unboxing example:
+
+```java
+public class Unboxing {
+ 
+    public static void main(String[] args) {
+ 
+        Integer i = new Integer(-8);
+ 
+        // 1. Unboxing through method invocation
+        int absVal = absoluteValue(i);
+        System.out.println("absolute value of " + i + " = " + absVal);
+ 
+        List<Double> ld = new ArrayList<>();
+        ld.add(3.1416);    // PI is autoboxed through method invocation.
+ 
+        // 2. Unboxing through assignment
+        double phi = ld.get(0);
+        System.out.println("phi = " + phi);
+    }
+ 
+    public static int absoluteValue(int i) {
+        return (i < 0) ? -i : i;
+    }
+}
+```
+
+### Arrays
+
+An array is a container object that holds a fixed number of values of a single type. 
+The length of an array is established when the array is created. 
+After creation, its length is fixed.
+
+Declaring a Variable to Refer to an Array:
+```
+byte[] anArrayOfBytes;
+short[] anArrayOfShorts;
+long[] anArrayOfLongs;
+float[] anArrayOfFloats;
+double[] anArrayOfDoubles;
+boolean[] anArrayOfBooleans;
+char[] anArrayOfChars;
+String[] anArrayOfStrings;
+```
+You can also place the brackets after the array's name:
+```
+// this form is discouraged
+float anArrayOfFloats[];
+```
+However, convention discourages this form; the brackets identify the array type and should 
+appear with the type designation.
+
+Creating:
+```
+int[] anArray = new int[10];
+anArray[0] = 100; // initialize first element
+anArray[1] = 200; // initialize second element
+anArray[2] = 300; // and so forth
+```
+
+Alternatively, you can use the shortcut syntax to create and initialize an array:
+
+```
+int[] anArray = { 
+    100, 200, 300,
+    400, 500, 600, 
+    700, 800, 900, 1000
+};
+```
+
+Copying Arrays:
+
+The System class has an arraycopy method that you can use to efficiently
+ copy data from one array into another:
+
+```java
+class ArrayCopyDemo {
+    public static void main(String[] args) {
+        char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
+			    'i', 'n', 'a', 't', 'e', 'd' };
+        char[] copyTo = new char[7];
+
+        System.arraycopy(copyFrom, 2, copyTo, 0, 7);
+        System.out.println(new String(copyTo));
+    }
+}
+```
+
+Some other useful operations provided by methods in the java.util.Arrays class, are:
+
+* Searching an array for a specific value to get the index at which it is placed 
+(the binarySearch method).
+* Comparing two arrays to determine if they are equal or not (the equals method).
+* Filling an array to place a specific value at each index (the fill method).
+* Sorting an array into ascending order. This can be done either sequentially, 
+using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8.
+ Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
