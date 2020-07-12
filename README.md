@@ -241,7 +241,6 @@ Basically, generic classes only work with objects and don't support primitives. 
 Other source says that wrappers was created because data structures in java (ArrayList, HashMap etc.) can store only the objects and plus the object is needed to support synchronization in multithreading.
 
 Wrapper initialization:
-
 ```java
 Boolean b = true;
 Short s = 32_000;
