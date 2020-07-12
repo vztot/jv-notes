@@ -8,6 +8,7 @@ These notes was made for better understanding of java
 ### Java Core
 - [x] [Java History and Philosophy](#java-history-and-philosophy)
 - [x] [Primitives](#primitives)
+- [x] [Objects](#objects)
 - [x] [Wrappers](#wrappers)
 - [x] [Conversions](#conversions)
 - [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
@@ -192,10 +193,10 @@ There were five primary goals in the creation of the Java language:
 
 ## primitives
 
-**They're stored on the stack.**
+**They're stored in the stack.**
 
-The eight primitives defined in Java are int, byte, short, long, float, double, boolean, and char – those aren't considered objects and represent raw values:
-
+The eight primitives defined in Java are `int`, `byte`, `short`, `long`, `float`, `double`,
+ `boolean`, and `char` – those aren't considered objects and represent raw values:
 
 ```java
 // integer types
@@ -214,8 +215,15 @@ double d = 77.99;           // 8 bytes; from 4.9e-324 to 1.7e+308; java double i
 int k = 0b111010;           // binary notation
 int m = 012;                // octal notation
 int n = 0xCAFE;             // hexadecimal notation
-long l = 0xCAFE_DEAL;        // hexadecimal with literal
+long l = 0xCAFE_DEAL;       // hexadecimal with literal
 ```
+
+## objects
+
+An object is a class instance or an array.
+
+The reference values (often just references) are pointers to these objects, and a
+special `null` reference, which refers to no object.
 
 ## wrappers
 
@@ -337,21 +345,40 @@ public class Unboxing {
 ```
 
 ### Arrays
+In the Java programming language, arrays are objects, are dynamically
+created, and may be assigned to variables of type `Object`. All methods of
+class `Object` may be invoked on an array.
 
-An array is a container object that holds a fixed number of values of a single type. 
-The length of an array is established when the array is created. 
-After creation, its length is fixed.
+An array object contains a number of variables. The number of variables may be
+zero, in which case the array is said to be empty. The variables contained in an
+array have no names; instead they are referenced by array access expressions that
+use non-negative integer index values. These variables are called the components
+of the array. If an array has n components, we say n is the length of the array;
+the components of the array are referenced using integer indices from 0 to n - 1,
+inclusive.
 
-Declaring a Variable to Refer to an Array:
-```
-byte[] anArrayOfBytes;
-short[] anArrayOfShorts;
-long[] anArrayOfLongs;
-float[] anArrayOfFloats;
-double[] anArrayOfDoubles;
-boolean[] anArrayOfBooleans;
-char[] anArrayOfChars;
-String[] anArrayOfStrings;
+All the components of an array have the same type, called the component type of
+the array. If the component type of an array is `T`, then the type of the array itself
+is written `T[]`.
+
+The element type of an array may be any type, whether primitive or reference. In
+particular:
+*  Arrays with an interface type as the element type are allowed.
+  An element of such an array may have as its value a null reference or an instance
+  of any type that implements the interface.
+* Arrays with an `abstract` class type as the element type are allowed.
+  An element of such an array may have as its value a null reference or an instance
+  of any subclass of the `abstract` class that is not itself `abstract`.
+
+Declarations of Array Variables:
+```java
+int[] ai;           // array of int
+short[][] as;       // array of array of short
+short s,            // scalar short
+aas[][];            // array of array of short
+Object[] ao,        // array of Object
+otherAo;            // array of Object
+Collection<?>[] ca; // array of Collection of unknown type
 ```
 You can also place the brackets after the array's name:
 ```
@@ -361,23 +388,25 @@ float anArrayOfFloats[];
 However, convention discourages this form; the brackets identify the array type and should 
 appear with the type designation.
 
-Creating:
-```
-int[] anArray = new int[10];
-anArray[0] = 100; // initialize first element
-anArray[1] = 200; // initialize second element
-anArray[2] = 300; // and so forth
-```
+The declarations above do not create array objects. The following are examples of
+declarations of array variables that do create array objects:
 
-Alternatively, you can use the shortcut syntax to create and initialize an array:
+```java
+Exception ae[] = new Exception[3];
+Object aao[][] = new Exception[2][3];
+int[] factorial = { 1, 1, 2, 6, 24, 120, 720, 5040 };
+char ac[] = { 'n', 'o', 't', ' ', 'a', ' ',
+              'S', 't', 'r', 'i', 'n', 'g' };
+String[] aas = { "array", "of", "String", };
+```
+The array's `length` is available as a final instance variable `length`.
 
-```
-int[] anArray = { 
-    100, 200, 300,
-    400, 500, 600, 
-    700, 800, 900, 1000
-};
-```
+An attempt to access an array component with a long index value results in a
+compile-time error.
+
+All array accesses are checked at run time; an attempt to use an index that
+is less than zero or greater than or equal to the length of the array causes an
+ArrayIndexOutOfBoundsException to be thrown.
 
 Copying Arrays:
 
@@ -396,7 +425,6 @@ class ArrayCopyDemo {
     }
 }
 ```
-
 Some other useful operations provided by methods in the java.util.Arrays class, are:
 
 * Searching an array for a specific value to get the index at which it is placed 
@@ -406,8 +434,6 @@ Some other useful operations provided by methods in the java.util.Arrays class, 
 * Sorting an array into ascending order. This can be done either sequentially, 
 using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8.
  Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
- 
- 
  
  ## Advanced
  
