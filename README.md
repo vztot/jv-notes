@@ -226,6 +226,10 @@ An object is a class instance or an array.
 The reference values (often just references) are pointers to these objects, and a
 special `null` reference, which refers to no object.
 
+```java
+Object object = new Object(); // here "object" is reference to an Object class instance
+```
+
 ## wrappers
 
 **They're stored in the heap.**
