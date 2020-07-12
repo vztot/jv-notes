@@ -13,7 +13,7 @@ These notes was made for better understanding of java
 - [x] [Conversions](#conversions)
 - [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
 - [x] [Arrays](#arrays)
-- [ ] Quick Converting
+- [ ] [Quick Converting](#quick-converting)
 - [ ] String vs StringBuilder
 - [ ] OOP
 - [ ] Static Classes, Static Methods, Static Variables
@@ -439,6 +439,13 @@ Some other useful operations provided by methods in the java.util.Arrays class, 
 * Sorting an array into ascending order. This can be done either sequentially, 
 using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8.
  Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
+ 
+ ## quick-converting
+ 
+ int[] -> List<Integer>
+ 
+ List<Integer> -> int[]
+ 
  
  ## Advanced
  
