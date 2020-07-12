@@ -1,6 +1,7 @@
 # Java Notes
 
-This notes was made for better understanding 
+## Purpose of the project
+These notes was made for better understanding of java
 
 ## Table of contents
 
