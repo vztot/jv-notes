@@ -227,7 +227,7 @@ The reference values (often just references) are pointers to these objects, and 
 special `null` reference, which refers to no object.
 
 ```java
-Object object = new Object(); // here "object" is reference to an Object class instance
+Object object = new Object(); // here "object" is a reference to an Object class instance
 ```
 
 ## wrappers
