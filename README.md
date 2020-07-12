@@ -439,15 +439,23 @@ using the sort method, or concurrently, using the parallelSort method introduced
  
  ### relevant-java-links
  [Java Docs 11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
+ 
  [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/)
+ 
  [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html)
+ 
  [sdkman.io](https://sdkman.io/)
+ 
  [jenkov.com](http://tutorials.jenkov.com/)
+ 
  [baeldung.com](https://www.baeldung.com/)
+ 
  
  ### git
  [GIT Manual](https://git.github.io/htmldocs/git.html)
+ 
  [GIT Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ 
  [.md Guide](https://guides.github.com/features/mastering-markdown/)
  
  File **.gitignore**:
