@@ -197,7 +197,7 @@ There were five primary goals in the creation of the Java language:
 The eight primitives defined in Java are int, byte, short, long, float, double, boolean, and char – those aren't considered objects and represent raw values:
 
 
-```
+```java
 // integer types
 boolean bool = true;        // boolean size is virtual machine dependent
 byte b = 127;               // 1 byte; from -128 to 127 
