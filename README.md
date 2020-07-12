@@ -53,7 +53,7 @@ These notes was made for better understanding of java
 - [ ] Multithreading
 - [ ] Synchronized block
 - [ ] Deadlock
-- [ ] Deadlock
+- [ ] Livelock
 - [ ] Volatile
 - [ ] Mutex
 - [ ] Monitor
@@ -237,7 +237,7 @@ Other source says that wrappers was created because data structures in java (Arr
 
 Wrapper initialization:
 
-```
+```java
 Boolean b = true;
 Short s = 32_000;
 Character c = 'c';
@@ -251,13 +251,13 @@ Float f = 1212.2f;
 ### Primitive to Primitive Conversions
 
 When we need to convert from a primitive that is simpler or smaller than the destination type, we don't have to use any special notation for that
-```
+```java
 int myInt = 127;
 long myLong = myInt;
 ```
 During widening conversion, the smaller primitive value is placed over a larger container, which means that all the extra space, on the left of the value, is filled with zeros. This may also be used to go from the integer group to the floating point
 
-```
+```java
 float myFloat = myLong;
 double myDouble = myLong;
 ```
@@ -268,7 +268,7 @@ Sometimes we need to fit a value that is larger than the type used in the variab
 In this case, we have to explicitly express that we are aware of the situation and we agree with that, by using a cast:
 
 
-```
+```java
 int myInt = (int) myDouble;
 byte myByte = (byte) myInt;
 ```
@@ -277,7 +277,7 @@ byte myByte = (byte) myInt;
 
 We can either use constructor or static factory methods to convert a primitive value to an object of a wrapper class
 
-```
+```java
 Integer object = new Integer(1);
 Integer anotherObject = Integer.valueOf(1);
 
@@ -291,13 +291,13 @@ int b = anotherObject.intValue();
  primitive types and their corresponding object wrapper classes. If the conversion goes the other way, this is called unboxing.
  
  Here is the simplest example of autoboxing:
-```
+```java
 Character ch = 'a';
 ```
 
 And another one:
 
-```
+```java
 List<Integer> list = new ArrayList<>();
         for (int i = 1; i < 50; i += 2) {
             list.add(i);
@@ -306,7 +306,7 @@ List<Integer> list = new ArrayList<>();
 
 Thus, the compiler converts the previous code to the following at runtime:
 
-```
+```java
 List<Integer> list = new ArrayList<>();
        for (int i = 1; i < 50; i += 2) {
            list.add(Integer.valueOf(i));
@@ -382,7 +382,7 @@ otherAo;            // array of Object
 Collection<?>[] ca; // array of Collection of unknown type
 ```
 You can also place the brackets after the array's name:
-```
+```java
 // this form is discouraged
 float anArrayOfFloats[];
 ```
