@@ -228,6 +228,7 @@ special `null` reference, which refers to no object.
 
 ```java
 Object object = new Object(); // here "object" is a reference to an Object class instance
+int[] arr = new int[1]; // here "arr" is a reference to a int array instance
 ```
 
 ## wrappers
