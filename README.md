@@ -344,7 +344,7 @@ public class Unboxing {
 }
 ```
 
-### Arrays
+## arrays
 In the Java programming language, arrays are objects, are dynamically
 created, and may be assigned to variables of type `Object`. All methods of
 class `Object` may be invoked on an array.
