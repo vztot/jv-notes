@@ -2,17 +2,15 @@
 
 This notes was made for better understanding 
 
-## TODO List
+## Table of contents
 
 ### Java Core
-- [ ] Anchor Navigation For This Document
-- [x] Relevant Java Links
-- [x] GIT
-- [x] Maven
-- [x] Google Java Style Guide
-- [x] Java History and Philosophy
-- [x] Primitives and wrappers. Autoboxing
-- [ ] Arrays
+- [x] [Java History and Philosophy](#java-history-and-philosophy)
+- [x] [Primitives](#primitives)
+- [x] [Wrappers](#wrappers)
+- [x] [Conversions](#conversions)
+- [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
+- [x] [Arrays](#arrays)
 - [ ] Quick Converting
 - [ ] String vs StringBuilder
 - [ ] OOP
@@ -64,6 +62,7 @@ This notes was made for better understanding
 - [ ] ForkJoin
 - [ ] java.util.concurrent.*
 - [ ] Atomics
+- [x] [Relevant Java Links](#relevant-java-links)
 
 ### Servlets
 - [ ] Servlet
@@ -143,11 +142,15 @@ This notes was made for better understanding
 - [ ] Annotations
 
 ### Advanced
+- [x] [GIT](#git)
+- [x] [Maven](#maven)
+- [x] [Google Java Style Guide](#google-java-style-guide)
 - [ ] Binary operations
 - [ ] Big O
 - [ ] Basic algorithms in Java
 - [ ] JUnit
 - [ ] Log4j
+- [ ] Lombok
 - [ ] TCP vs UDP
 
 ### Patterns and Principles
@@ -170,71 +173,8 @@ This notes was made for better understanding
 - [ ] Swagger
 - [ ] H2
 
-## Relevant Java Links
 
-[Java Docs 11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
-
-[Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/)
-
-[Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html)
-
-[sdkman.io](https://sdkman.io/)
-
-[jenkov.com](http://tutorials.jenkov.com/)
-
-[baeldung.com](https://www.baeldung.com/)
-
-## GIT
-
-[GIT Manual](https://git.github.io/htmldocs/git.html)
-
-[GIT Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-[.md Guide](https://guides.github.com/features/mastering-markdown/)
-
-File **.gitignore**:
-
-```
-.idea/*
-target/*
-out/*
-logs/*
-*.iml
-```
-
-Relevant git commands: 
-
-|command|description|
-|---|---|
-|`git --version`|prints git version|
-|`git init`|add git to a project|
-|`git add .`|add all files of a project to git|
-|`git remote add reponame https://repository.com/address.git`|add new tracked repo|
-|`git remote`|prints set of tracked repos|
-|`git checkout -b branchname`|checkout to new branch "branchname"|
-|`git commit -am "commit msg"`|make a commit|
-|`git push reponame branchname`|push to tracked repo|
-|`git rm -r --cached`|remove git|
-
-## Maven
-
-[Maven Manual](https://maven.apache.org/guides/index.html)
-
-[Maven Install](https://www.baeldung.com/install-maven-on-windows-linux-mac)
-
-Relevant maven commands: 
-
-```
-mvn --version
-mvn clear
-mvn package
-```
-
-## Google Java Style Guide
-
-[Manual](https://google.github.io/styleguide/javaguide.html)
-
-## Java History and Philosophy
+## java-history-and-philosophy
 
 ### History
 
@@ -249,16 +189,14 @@ There were five primary goals in the creation of the Java language:
 4. It should be designed to execute code from remote sources securely.
 5. It should be easy to use by selecting what was considered the good parts of other object-oriented languages.
 
-## Primitives and wrappers. Autoboxing
-
-### Primitives
+## primitives
 
 **They're stored on the stack.**
 
 The eight primitives defined in Java are int, byte, short, long, float, double, boolean, and char – those aren't considered objects and represent raw values:
 
 
-```java
+```
 // integer types
 boolean bool = true;        // boolean size is virtual machine dependent
 byte b = 127;               // 1 byte; from -128 to 127 
@@ -278,7 +216,7 @@ int n = 0xCAFE;             // hexadecimal notation
 long l = 0xCAFE_DEAL;        // hexadecimal with literal
 ```
 
-### Wrappers
+## wrappers
 
 **They're stored in the heap.**
 
@@ -289,7 +227,7 @@ Other source says that wrappers was created because data structures in java (Arr
 
 Wrapper initialization:
 
-```java
+```
 Boolean b = true;
 Short s = 32_000;
 Character c = 'c';
@@ -298,16 +236,18 @@ Long l = 12312321211L;
 Float f = 1212.2f;
 ```
 
+## conversions
+
 ### Primitive to Primitive Conversions
 
 When we need to convert from a primitive that is simpler or smaller than the destination type, we don't have to use any special notation for that
-```java
+```
 int myInt = 127;
 long myLong = myInt;
 ```
 During widening conversion, the smaller primitive value is placed over a larger container, which means that all the extra space, on the left of the value, is filled with zeros. This may also be used to go from the integer group to the floating point
 
-```java
+```
 float myFloat = myLong;
 double myDouble = myLong;
 ```
@@ -318,17 +258,16 @@ Sometimes we need to fit a value that is larger than the type used in the variab
 In this case, we have to explicitly express that we are aware of the situation and we agree with that, by using a cast:
 
 
-```java
+```
 int myInt = (int) myDouble;
 byte myByte = (byte) myInt;
 ```
 
-
-### Primitive to Wrapper Class Conversion
+### Primitive to Wrapper Class Conversions
 
 We can either use constructor or static factory methods to convert a primitive value to an object of a wrapper class
 
-```java
+```
 Integer object = new Integer(1);
 Integer anotherObject = Integer.valueOf(1);
 
@@ -336,7 +275,7 @@ int a = object.intValue();
 int b = anotherObject.intValue();
 ```
 
-### Autoboxing and Unboxing
+## autoboxing-and-unboxing
 
 **After Java 5**. Autoboxing is the automatic conversion that the Java compiler makes between the
  primitive types and their corresponding object wrapper classes. If the conversion goes the other way, this is called unboxing.
@@ -466,3 +405,61 @@ Some other useful operations provided by methods in the java.util.Arrays class, 
 * Sorting an array into ascending order. This can be done either sequentially, 
 using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8.
  Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
+ 
+ 
+ 
+ ## Advanced
+ 
+ ### relevant-java-links
+ [Java Docs 11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
+ [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/)
+ [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html)
+ [sdkman.io](https://sdkman.io/)
+ [jenkov.com](http://tutorials.jenkov.com/)
+ [baeldung.com](https://www.baeldung.com/)
+ 
+ ### git
+ [GIT Manual](https://git.github.io/htmldocs/git.html)
+ [GIT Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ [.md Guide](https://guides.github.com/features/mastering-markdown/)
+ 
+ File **.gitignore**:
+ 
+ ```
+ .idea/*
+ target/*
+ out/*
+ logs/*
+ *.iml
+ ```
+ 
+ Relevant git commands: 
+ 
+ |command|description|
+ |---|---|
+ |`git --version`|prints git version|
+ |`git init`|add git to a project|
+ |`git add .`|add all files of a project to git|
+ |`git remote add reponame https://repository.com/address.git`|add new tracked repo|
+ |`git remote`|prints set of tracked repos|
+ |`git checkout -b branchname`|checkout to new branch "branchname"|
+ |`git commit -am "commit msg"`|make a commit|
+ |`git push reponame branchname`|push to tracked repo|
+ |`git rm -r --cached`|remove git|
+ 
+ ### maven
+ 
+ [Maven Manual](https://maven.apache.org/guides/index.html)
+ 
+ [Maven Install](https://www.baeldung.com/install-maven-on-windows-linux-mac)
+ 
+ Relevant maven commands: 
+ 
+ ```
+ mvn --version
+ mvn clear
+ mvn package
+ ```
+ 
+ ### google-java-style-guide
+ [Manual](https://google.github.io/styleguide/javaguide.html)
