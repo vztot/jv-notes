@@ -483,7 +483,7 @@ for dealing with Strings in Java.
 synchronization. `StringBuffer` is a thread-safe, mutable sequence of characters. `StringBuilder` 
 class is designed for use as a drop-in replacement for `StringBuffer` in places where the string
 buffer was being used by a single thread (as is generally the case). Where possible, it is
-recommended that `StringBuilder` class be use in preference to StringBuffer as it will be
+recommended that `StringBuilder` class be use in preference to `StringBuffer` as it will be
 faster under most implementations.
  
  ## Advanced
