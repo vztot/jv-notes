@@ -453,7 +453,9 @@ int[] -> List\<Integer>
 List\<Integer> -> int[]
  ```java
         List<Integer> list = Arrays.asList(1,2,3);
-        int[] arr = list.stream().mapToInt(i -> i).toArray();
+        int[] arr = list.stream()
+                .mapToInt(i -> i)
+                .toArray();
  ```
 
 Object[] -> List\<Object>
