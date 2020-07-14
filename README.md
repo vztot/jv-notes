@@ -13,7 +13,7 @@ These notes was made for better understanding of java
 - [x] [Conversions](#conversions)
 - [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
 - [x] [Arrays](#arrays)
-- [ ] [Quick Converting](#quick-converting)
+- [x] [Quick Array To List List To Array Converting](#quick-array-to-list-list-to-array-converting)
 - [ ] String vs StringBuilder
 - [ ] OOP
 - [ ] Static Classes, Static Methods, Static Variables
@@ -440,12 +440,35 @@ Some other useful operations provided by methods in the java.util.Arrays class, 
 using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8.
  Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
  
- ## quick-converting
+ ## quick-array-to-list-list-to-array-converting
  
- int[] -> List<Integer>
+int[] -> List<Integer>
+```java
+        int[] arr = {1, 2, 3};
+        List<Integer> list = Arrays.stream(arr)
+                .boxed()
+                .collect(Collectors.toList());
+```
  
- List<Integer> -> int[]
- 
+List<Integer> -> int[]
+ ```java
+        List<Integer> list = Arrays.asList(1,2,3);
+        int[] arr = list.stream().mapToInt(i -> i).toArray();
+ ```
+
+Object[] -> List<Object>
+```java
+        String[] strings = {"a", "b", "c"};
+        List<String> list = Arrays.asList(strings);
+```
+
+List<Object> -> Object[]
+ ```java
+        List<String> list = Arrays.asList("a", "b", "c");
+        String[] arr = list.toArray(new String[]{});
+ ```
+
+
  
  ## Advanced
  
