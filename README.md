@@ -14,7 +14,7 @@ These notes was made for better understanding of java
 - [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
 - [x] [Arrays](#arrays)
 - [x] [Quick Array To List List To Array Converting](#quick-array-to-list-list-to-array-converting)
-- [ ] String vs StringBuilder
+- [ ] [String vs StringBuilder vs StringBuffer](#string-vs-stringbuilder-vs-stringbuffer)
 - [ ] OOP
 - [ ] Static Classes, Static Methods, Static Variables
 - [ ] Exceptions
@@ -470,7 +470,21 @@ List\<Object> -> Object[]
         String[] arr = list.toArray(new String[]{});
  ```
 
+## string-vs-stringBuilder-vs-stringBuffer
 
+### Differences between String and StringBuilder
+The main difference between `String` and `StringBuilder` is `String` is **immutable** while 
+`StringBuilder` is **mutable** means you can modify a `StringBuilder` object once you created it 
+without creating any new object. This mutable property makes `StringBuilder` an ideal choice 
+for dealing with Strings in Java.
+
+### Differences between StringBuffer and StringBuilder
+`StringBuilder` provides an API compatible with `StringBuffer`, but with no guarantee of 
+synchronization. `StringBuffer` is a thread-safe, mutable sequence of characters. `StringBuilder` 
+class is designed for use as a drop-in replacement for `StringBuffer` in places where the string
+buffer was being used by a single thread (as is generally the case). Where possible, it is
+recommended that `StringBuilder` class be use in preference to StringBuffer as it will be
+faster under most implementations.
  
  ## Advanced
  
