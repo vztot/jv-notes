@@ -442,7 +442,7 @@ using the sort method, or concurrently, using the parallelSort method introduced
  
  ## quick-array-to-list-list-to-array-converting
  
-int[] -> List<Integer>
+int[] -> List\<Integer>
 ```java
         int[] arr = {1, 2, 3};
         List<Integer> list = Arrays.stream(arr)
@@ -450,19 +450,19 @@ int[] -> List<Integer>
                 .collect(Collectors.toList());
 ```
  
-List<Integer> -> int[]
+List\<Integer> -> int[]
  ```java
         List<Integer> list = Arrays.asList(1,2,3);
         int[] arr = list.stream().mapToInt(i -> i).toArray();
  ```
 
-Object[] -> List<Object>
+Object[] -> List\<Object>
 ```java
         String[] strings = {"a", "b", "c"};
         List<String> list = Arrays.asList(strings);
 ```
 
-List<Object> -> Object[]
+List\<Object> -> Object[]
  ```java
         List<String> list = Arrays.asList("a", "b", "c");
         String[] arr = list.toArray(new String[]{});
