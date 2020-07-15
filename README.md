@@ -152,10 +152,10 @@ These notes was made for better understanding of java
 - [ ] [Java data structures complexity](#java-data-structures-complexity)
 - [ ] [Binary Search](#binary-search)
 - [ ] [Bubble Sort](#buble-sort)
-- [ ] [Insertion Sort](#insertion sort)
-- [ ] [Selection Sort](#selection sort)
-- [ ] [Merge Sort](#merge sort)
-- [ ] [Quick Sort](#quick sort)
+- [ ] [Insertion Sort](#insertion-sort)
+- [ ] [Selection Sort](#selection-sort)
+- [ ] [Merge Sort](#merge-sort)
+- [ ] [Quick Sort](#quick-sort)
 
 ### Patterns
 - [ ] [Singleton](#singleton)
