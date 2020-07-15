@@ -7,173 +7,193 @@ These notes was made for better understanding of java
 
 ### Java Core
 - [x] [Java History and Philosophy](#java-history-and-philosophy)
+- [x] [Google Java Style Guide](#google-java-style-guide)
 - [x] [Primitives](#primitives)
+- [ ] [Binary operations](#binary-operations)
 - [x] [Objects](#objects)
 - [x] [Wrappers](#wrappers)
 - [x] [Conversions](#conversions)
 - [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
 - [x] [Arrays](#arrays)
 - [x] [Quick Array To List List To Array Converting](#quick-array-to-list-list-to-array-converting)
-- [ ] [String vs StringBuilder vs StringBuffer](#string-vs-stringbuilder-vs-stringbuffer)
-- [ ] OOP
-- [ ] Static Classes, Static Methods, Static Variables
-- [ ] Exceptions
-- [ ] Abstract Classes vs Interfaces
-- [ ] Build Pattern
-- [ ] Java NIO vs IO
-- [ ] RegEx
-- [ ] Cloneable
-- [ ] Equals
-- [ ] HashCode
-- [ ] Generics
-- [ ] Wildcard
-- [ ] PECS
-- [ ] ArrayList
-- [ ] LinkedList
-- [ ] Immutable class
-- [ ] HashMap
-- [ ] TreeMap
-- [ ] Comparator
-- [ ] Iterator
-- [ ] Set
-- [ ] TreeSet
-- [ ] Queue
-- [ ] Stack
-- [ ] Collection Framework
-- [ ] Optional
-- [ ] Anonymous class
-- [ ] Functional interfaces
-- [ ] Lambda
-- [ ] Method reference
-- [ ] Stream API
-- [ ] Iterate and Generate
-- [ ] Parallel Streams
-- [ ] DateTime API
-- [ ] Reflection API
-- [ ] Multithreading
-- [ ] Synchronized block
-- [ ] Deadlock
-- [ ] Livelock
-- [ ] Volatile
-- [ ] Mutex
-- [ ] Monitor
-- [ ] Semaphore
-- [ ] Runnable
-- [ ] Callable
-- [ ] ExecutorService
-- [ ] ForkJoin
-- [ ] java.util.concurrent.*
-- [ ] Atomics
+- [x] [String vs StringBuilder vs StringBuffer](#string-vs-stringbuilder-vs-stringbuffer)
+- [x] [OOP](#oop)
+- [ ] [Static Classes](#static-classes)
+- [ ] [Static Methods](#static-methods)
+- [ ] [Static Variables](#static-variables)
+- [ ] [Exceptions](#exceptions)
+- [ ] [Abstract Class](#abstract-classes)
+- [ ] [Interface](#interface)
+- [ ] [Build Pattern](#build-pattern)
+- [ ] [Java NIO vs IO](#java-nio-vs-io)
+- [ ] [Object Class](#object-class)
+- [ ] [RegEx](#regex)
+- [ ] [Cloneable](#clonable)
+- [ ] [Equals](#equals)
+- [ ] [HashCode](#hashcode)
+- [ ] [Generics](#generics)
+- [ ] [Wildcard](#wildcard)
+- [ ] [Collection Framework](#)
+- [ ] [ArrayList](#array-list)
+- [ ] [LinkedList](#linked-list)
+- [ ] [Stateless class](#stateless-class)
+- [ ] [Immutable class](#immutable-class)
+- [ ] [HashMap](#hash-map)
+- [ ] [Comparator](#comparator)
+- [ ] [Iterator](#iterator)
+- [ ] [TreeMap](#tree-map)
+- [ ] [Set](#set)
+- [ ] [TreeSet](#tree-set)
+- [ ] [Queue](#queue)
+- [ ] [Stack](#stack)
+- [ ] [Optional](#optional)
+- [ ] [Anonymous class](#anonymous-class)
+- [ ] [Functional interface](#functional-interface)
+- [ ] [Lambda](#lambda)
+- [ ] [Method reference](#method-reference)
+- [ ] [Stream API](#stream-api)
+- [ ] [Iterate and Generate](#iterate-and-generate)
+- [ ] [Parallel Streams](#parallel-streams)
+- [ ] [DateTime API](#date-time-api)
+- [ ] [Reflection API](#reflection-api)
+- [ ] [Multithreading](#multithreading)
+- [ ] [Volatile](#volatile)
+- [ ] [Synchronized keyword](#synchronized-keyword)
+- [ ] [Synchronized block](#synchronized-block)
+- [ ] [Deadlock](#deadlock)
+- [ ] [Livelock](#livelock)
+- [ ] [Mutex](#mutx)
+- [ ] [Monitor](#monitor)
+- [ ] [Semaphore](#semaphore)
+- [ ] [Runnable](#runnable)
+- [ ] [Callable](#callable)
+- [ ] [ExecutorService](#executor-service)
+- [ ] [ForkJoin](#fork-join)
+- [ ] [Concurrent API](#concurrent-api)
+- [ ] [Atomics](#atomics)
 - [x] [Relevant Java Links](#relevant-java-links)
 
 ### Servlets
-- [ ] Servlet
-- [ ] Server
-- [ ] Model, View, Controlled and DAO
-- [ ] Tomcat
-- [ ] Web.xml
-- [ ] JSP
-- [ ] Request Dispatcher
-- [ ] Http Methods
-- [ ] GET
-- [ ] POST
-- [ ] Http Codes
-- [ ] JSTL
-- [ ] Security in Web
-- [ ] Authentication and Authorization
-- [ ] RBAC vs ABAC
-- [ ] Cookies
-- [ ] Filters
-- [ ] HttpSession
+- [ ] [Servlet]
+- [ ] [Server]
+- [ ] [TCP vs UDP]
+- [ ] [Tomcat]
+- [ ] [Web.xml]
+- [ ] [JSP]
+- [ ] [Request Dispatcher]
+- [ ] [Http Methods]
+- [ ] [GET]
+- [ ] [POST]
+- [ ] [Http Codes]
+- [ ] [JSTL]
+- [ ] [Security in Web]
+- [ ] [Authentication and Authorization]
+- [ ] [RBAC vs ABAC]
+- [ ] [Cookies]
+- [ ] [Filters]
+- [ ] [HttpSession]
 
 ### JDBC & SQL
-- [ ] SQL vs NoSQL
-- [ ] SQL basics
-- [ ] JDBC
-- [ ] JDBC driver
-- [ ] DB connection
-- [ ] MySQL connection example
-- [ ] Password hashing
+- [ ] [SQL vs NoSQL]
+- [ ] [SQL basics]
+- [ ] [JDBC]
+- [ ] [JDBC driver]
+- [ ] [DB connection]
+- [ ] [MySQL connection example]
+- [ ] [Password hashing]
 
 ### Hibernate
-- [ ] JPA
-- [ ] ORM
-- [ ] What is Hibernate?
-- [ ] Session and SessionFactory
-- [ ] Entity annotations
-- [ ] CriteriaQuery
-- [ ] HQL
-- [ ] Hibernate.cfg.xml
-- [ ] Entity states
-- [ ] Relationships
-- [ ] Cascade
-- [ ] LazyInitializationException
-- [ ] Transaction
-- [ ] ACID
-- [ ] Isolation levels
-- [ ] JPA proxy object
-- [ ] N+1 problem
-- [ ] Cache levels
-- [ ] JPA inheritance
-- [ ] Transient annotation
-- [ ] Annotations
+- [ ] [JPA]
+- [ ] [ORM]
+- [ ] [What is Hibernate?]
+- [ ] [Session and SessionFactory]
+- [ ] [Entity states]
+- [ ] [HQL]
+- [ ] [CriteriaQuery]
+- [ ] [Hibernate.cfg.xml]
+- [ ] [Relationships]
+- [ ] [Cascade]
+- [ ] [LazyInitializationException]
+- [ ] [Transaction]
+- [ ] [Isolation levels]
+- [ ] [Read phenomena]
+- [ ] [N+1 problem]
+- [ ] [JPA proxy object]
+- [ ] [Cache levels]
+- [ ] [JPA inheritance]
+- [ ] [Hibernate annotations cheatsheet]
 
 ### Spring
-- [ ] AoP
-- [ ] IoC
-- [ ] DI
-- [ ] ApplicationContext
-- [ ] Beans
-- [ ] Bean Lifecycle
-- [ ] Autowiring
-- [ ] Circular Dependency
-- [ ] Primary and Qualifier
-- [ ] DataSource configuration
-- [ ] Properties file
-- [ ] Spring Web MVC
-- [ ] View resolver
-- [ ] Controller and RestController
-- [ ] Bean scope
-- [ ] What is REST?
-- [ ] REST vs SOAP
-- [ ] Spring Security
-- [ ] Security Configuration
-- [ ] SecurityContext
-- [ ] Spring Boot
-- [ ] Spring Data
-- [ ] Annotations
+- [ ] [What is Spring]
+- [ ] [ApplicationContext]
+- [ ] [Beans]
+- [ ] [Bean Lifecycle]
+- [ ] [Bean scope]
+- [ ] [Autowiring]
+- [ ] [Circular Dependency]
+- [ ] [Primary and Qualifier]
+- [ ] [DataSource configuration]
+- [ ] [Properties file]
+- [ ] [Spring Web MVC]
+- [ ] [View resolver]
+- [ ] [Controller and RestController]
+- [ ] [What is REST?]
+- [ ] [Spring Security]
+- [ ] [Security Configuration]
+- [ ] [SecurityContext]
+- [ ] [UserDetails]
+- [ ] [Spring Boot]
+- [ ] [Spring Data]
+- [ ] [Spring annotations cheatsheet]
 
-### Advanced
+### Algorithms
+- [ ] [Big O notation]
+- [ ] [Java data structures complexity]
+- [ ] [Binary Search]
+- [ ] [Bubble Sort]
+- [ ] [Insertion Sort]
+- [ ] [Selection Sort]
+- [ ] [Merge Sort]
+- [ ] [Quick Sort]
+
+### Patterns
+- [ ] [Singleton]
+- [ ] [Abstract factory]
+- [ ] [Builder]
+- [ ] [Facade]
+- [ ] [Proxy]
+- [ ] [Command]
+- [ ] [Strategy]
+
+### Principles
+- [ ] [PECS]
+- [ ] [MVC]
+- [ ] [DAO]
+- [ ] [CRUD]
+- [ ] [MVP]
+- [ ] [SOLID]
+- [ ] [ACID]
+- [ ] [IoC]
+- [ ] [DI]
+- [ ] [REST]
+- [ ] [SOAP]
+- [ ] [DTO]
+
+### Frameworks and libs
+- [ ] [JUnit]
+- [ ] [Log4j]
+- [ ] [Lombok]
+- [ ] [Swagger]
+- [ ] [H2]
+
+### Environment
 - [x] [GIT](#git)
 - [x] [Maven](#maven)
-- [x] [Google Java Style Guide](#google-java-style-guide)
-- [ ] Binary operations
-- [ ] Big O
-- [ ] Basic algorithms in Java
-- [ ] JUnit
-- [ ] Log4j
-- [ ] Lombok
-- [ ] TCP vs UDP
-
-### Patterns and Principles
-- [ ] PECS
-- [ ] DAO
-- [ ] CRUD
-- [ ] MVP
-- [ ] MVC
-- [ ] SOLID
-- [ ] ACID
-- [ ] IoC
-- [ ] DI
-- [ ] DTO
-- [ ] REST
-- [ ] SOAP
-
-### Additional environment
-- [ ] MySQL Workbench
-- [ ] Postman
-- [ ] Swagger
-- [ ] H2
+- [ ] [MySQL Workbench]
+- [ ] [Postman]
+- [ ] [Travis]
+- [ ] [SonarQube]
+- [ ] [Heroku]
 
 ## Java Core
 
@@ -292,7 +312,8 @@ int b = anotherObject.intValue();
 ## autoboxing-and-unboxing
 
 **After Java 5**. Autoboxing is the automatic conversion that the Java compiler makes between the
- primitive types and their corresponding object wrapper classes. If the conversion goes the other way, this is called unboxing.
+ primitive types and their corresponding object wrapper classes. If the conversion goes the other 
+ way, this is called unboxing.
  
  Here is the simplest example of autoboxing:
 ```java
@@ -317,7 +338,9 @@ List<Integer> list = new ArrayList<>();
        }
 ```
 
-Converting a primitive value (an int, for example) into an object of the corresponding wrapper class (Integer) is called autoboxing. The Java compiler applies autoboxing when a primitive value is:
+Converting a primitive value (an int, for example) into an object of the corresponding wrapper
+ class (Integer) is called autoboxing. The Java compiler applies autoboxing when a primitive 
+ value is:
 
 * Passed as a parameter to a method that expects an object of the corresponding wrapper class.
 * Assigned to a variable of the corresponding wrapper class.
@@ -325,28 +348,9 @@ Converting a primitive value (an int, for example) into an object of the corresp
 Unboxing example:
 
 ```java
-public class Unboxing {
- 
-    public static void main(String[] args) {
- 
-        Integer i = new Integer(-8);
- 
-        // 1. Unboxing through method invocation
-        int absVal = absoluteValue(i);
-        System.out.println("absolute value of " + i + " = " + absVal);
- 
-        List<Double> ld = new ArrayList<>();
-        ld.add(3.1416);    // PI is autoboxed through method invocation.
- 
-        // 2. Unboxing through assignment
-        double phi = ld.get(0);
-        System.out.println("phi = " + phi);
-    }
- 
-    public static int absoluteValue(int i) {
-        return (i < 0) ? -i : i;
-    }
-}
+List<Double> list = new ArrayList<>();
+list.add(3.1416);
+double val = list.get(0);
 ```
 
 ## arrays
@@ -368,12 +372,12 @@ is written `T[]`.
 
 The element type of an array may be any type, whether primitive or reference. In
 particular:
-*  Arrays with an interface type as the element type are allowed.
+*  Arrays with an `interface` type as the element type are allowed.
   An element of such an array may have as its value a null reference or an instance
   of any type that implements the interface.
 * Arrays with an `abstract` class type as the element type are allowed.
   An element of such an array may have as its value a null reference or an instance
-  of any subclass of the `abstract` class that is not itself `abstract`.
+  of any subclass of the abstract class that is not itself abstract.
 
 Declarations of Array Variables:
 ```java
@@ -485,8 +489,106 @@ class is designed for use as a drop-in replacement for `StringBuffer` in places 
 buffer was being used by a single thread (as is generally the case). Where possible, it is
 recommended that `StringBuilder` class be use in preference to `StringBuffer` as it will be
 faster under most implementations.
- 
- ## Advanced
+
+### Performance example
+
+```java
+public class Main {
+    public static final int LOOPS = 100000;
+
+    public static void main(String[] args) {
+        String string = "";
+        long t1 = System.currentTimeMillis();
+        for (int i = 0; i < LOOPS; i++) {
+            string += "j";
+        }
+        long t2 = System.currentTimeMillis();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < LOOPS; i++) {
+            sb.append("j");
+        }
+        long t3 = System.currentTimeMillis();
+        System.out.println(string.length());
+        System.out.println(sb.toString().length());
+        System.out.println("String concatenation (milliseconds): " + (t2 - t1));
+        System.out.println("StringBuilder append (milliseconds): " + (t3 - t2));
+    }
+}
+```
+
+Result of execution: 
+
+```
+100000
+100000
+String concatenation (milliseconds): 913
+StringBuilder append (milliseconds): 3
+```
+
+### Concatenation in runtime
+
+**Question.** Given the 2 toString() implementations below, which one is preferred:
+
+```java
+public String toString(){
+    return "{a:"+ a + ", b:" + b + ", c: " + c +"}";
+}
+```
+
+or 
+
+```java
+public String toString(){
+    StringBuilder sb = new StringBuilder(100);
+    return sb.append("{a:").append(a)
+          .append(", b:").append(b)
+          .append(", c:").append(c)
+          .append("}")
+          .toString();
+}
+```
+
+**Answer.** Version 1 is preferable because it is shorter and the compiler will in fact turn it into
+version 2 - no performance difference whatsoever.
+
+>An implementation may choose to perform conversion and concatenation in one step to avoid 
+>creating and then discarding an intermediate String object. To increase the performance of 
+>repeated string concatenation, a Java compiler may use the StringBuffer class or a similar 
+>technique to reduce the number of intermediate String objects that are created by evaluation 
+>of an expression.
+
+[link](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.18.1)
+
+## oop
+### Fundamentals
+Object-oriented programming is a programming paradigm where everything is represented as an object.
+
+### What Are Objects?
+An object is an entity that has states and behaviors.
+
+### What Are Classes?
+A class is a template or blueprint from which objects are created.
+Classes define states as instance variables and behaviors as instance methods.
+
+### Principles of object-oriented programming
+
+- Encapsulation
+- Inheritance
+- Abstraction
+- Polymorphism
+
+### Encapsulation
+Encapsulation is a process of wrapping code and data together into a single unit.
+
+### Inheritance
+Inheritance is a mechanism in which one object acquires all the states and behaviors of 
+a parent object.
+
+### Abstraction
+Abstraction is a process of hiding the implementation details and showing only
+functionality to the user.
+
+ ## advanced
  
  ### relevant-java-links
  [Java Docs 11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
