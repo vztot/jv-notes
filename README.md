@@ -74,126 +74,128 @@ These notes was made for better understanding of java
 - [x] [Relevant Java Links](#relevant-java-links)
 
 ### Servlets
-- [ ] [Servlet]
-- [ ] [Server]
-- [ ] [TCP vs UDP]
-- [ ] [Tomcat]
-- [ ] [Web.xml]
-- [ ] [JSP]
-- [ ] [Request Dispatcher]
-- [ ] [Http Methods]
-- [ ] [GET]
-- [ ] [POST]
-- [ ] [Http Codes]
-- [ ] [JSTL]
-- [ ] [Security in Web]
-- [ ] [Authentication and Authorization]
-- [ ] [RBAC vs ABAC]
-- [ ] [Cookies]
-- [ ] [Filters]
-- [ ] [HttpSession]
+- [ ] [Servlet](#servlet)
+- [ ] [Server](#server)
+- [ ] [TCP vs UDP](#tcp-vs-udp)
+- [ ] [Tomcat](#tomcat)
+- [ ] [Web.xml](#web-xml)
+- [ ] [JSP](#jsp)
+- [ ] [Request Dispatcher](#request-dispatcher)
+- [ ] [Http Methods](#http-methods)
+- [ ] [GET request](#get-request)
+- [ ] [POST request](#post-request)
+- [ ] [Http Codes](#http-codes)
+- [ ] [JSTL](#jstl)
+- [ ] [Security in Web](#security-in-web)
+- [ ] [Authentication and Authorization](#authentication-vs-authorization)
+- [ ] [RBAC vs ABAC](#rbac-vs-abac)
+- [ ] [Cookies](#cookies)
+- [ ] [Filters](#filters)
+- [ ] [HttpSession](#http-session)
 
 ### JDBC & SQL
-- [ ] [SQL vs NoSQL]
-- [ ] [SQL basics]
-- [ ] [JDBC]
-- [ ] [JDBC driver]
-- [ ] [DB connection]
-- [ ] [MySQL connection example]
-- [ ] [Password hashing]
+- [ ] [SQL vs NoSQL](#sql-vs-no-sql)
+- [ ] [SQL constrains](#constrains)
+- [ ] [SQL basics](#sql-basics)
+- [ ] [JDBC](#jdbc)
+- [ ] [JDBC driver](#jdbc-driver)
+- [ ] [DB connection](#db-connection)
+- [ ] [MySQL connection example](#mysql-connection-example)
+- [ ] [Password hashing](#password-hashing)
 
 ### Hibernate
-- [ ] [JPA]
-- [ ] [ORM]
-- [ ] [What is Hibernate?]
-- [ ] [Session and SessionFactory]
-- [ ] [Entity states]
-- [ ] [HQL]
-- [ ] [CriteriaQuery]
-- [ ] [Hibernate.cfg.xml]
-- [ ] [Relationships]
-- [ ] [Cascade]
-- [ ] [LazyInitializationException]
-- [ ] [Transaction]
-- [ ] [Isolation levels]
-- [ ] [Read phenomena]
-- [ ] [N+1 problem]
-- [ ] [JPA proxy object]
-- [ ] [Cache levels]
-- [ ] [JPA inheritance]
-- [ ] [Hibernate annotations cheatsheet]
+- [ ] [JPA](#jpa)
+- [ ] [ORM](#orm)
+- [ ] [What is Hibernate?](#what-is-hibernate)
+- [ ] [Session and SessionFactory](#session-vs-session-factory)
+- [ ] [Entity states](#entity-states)
+- [ ] [HQL](#hql)
+- [ ] [CriteriaQuery](#criteria-query)
+- [ ] [Hibernate.cfg.xml](#hibernate-cfg-xml)
+- [ ] [Entity relations](#entity-relations)
+- [ ] [Entity cascades](#entity-cascades)
+- [ ] [LazyInitializationException](#lazy-initialization-exception)
+- [ ] [Transaction](#transaction)
+- [ ] [Isolation levels](#isolation-levels)
+- [ ] [Read phenomena](#read-phenomena)
+- [ ] [N+1 problem](#n-plus-one-phenomena)
+- [ ] [JPA proxy object](#jpa-proxy-object)
+- [ ] [Cache levels](#cache-levels)
+- [ ] [JPA inheritance](#jpa-inheritance)
+- [ ] [Hibernate annotations cheatsheet](#hibernate-annotations-cheatsheet)
 
 ### Spring
-- [ ] [What is Spring]
-- [ ] [ApplicationContext]
-- [ ] [Beans]
-- [ ] [Bean Lifecycle]
-- [ ] [Bean scope]
-- [ ] [Autowiring]
-- [ ] [Circular Dependency]
-- [ ] [Primary and Qualifier]
-- [ ] [DataSource configuration]
-- [ ] [Properties file]
-- [ ] [Spring Web MVC]
-- [ ] [View resolver]
-- [ ] [Controller and RestController]
-- [ ] [What is REST?]
-- [ ] [Spring Security]
-- [ ] [Security Configuration]
-- [ ] [SecurityContext]
-- [ ] [UserDetails]
-- [ ] [Spring Boot]
-- [ ] [Spring Data]
-- [ ] [Spring annotations cheatsheet]
+- [ ] [What is Spring](#what-is-spring)
+- [ ] [ApplicationContext](#application-context)
+- [ ] [Beans](#beans)
+- [ ] [Bean Lifecycle](#bean-lifecycle)
+- [ ] [Bean scope](#bean-scope)
+- [ ] [Autowiring](#autowiring)
+- [ ] [Circular Dependency](#circular-dependency)
+- [ ] [Primary and Qualifier](#primary-and-qualifier)
+- [ ] [DataSource configuration](#datasource-configuration)
+- [ ] [Properties file](#properties-file)
+- [ ] [Spring Web MVC](#spring-web-mvc)
+- [ ] [View resolver](#view-resolver)
+- [ ] [Controller and RestController](#controller-and-rest-controller)
+- [ ] [What is REST?](#what-is-rest)
+- [ ] [Spring Security](#spring-security)
+- [ ] [Security Configuration](#security-configuration)
+- [ ] [SecurityContext](#security-context)
+- [ ] [UserDetails](#user-details)
+- [ ] [Spring Boot](#spring-boot)
+- [ ] [Spring Data](#spring-data)
+- [ ] [Spring annotations cheatsheet](#spring-annotations-cheatsheet)
 
 ### Algorithms
-- [ ] [Big O notation]
-- [ ] [Java data structures complexity]
-- [ ] [Binary Search]
-- [ ] [Bubble Sort]
-- [ ] [Insertion Sort]
-- [ ] [Selection Sort]
-- [ ] [Merge Sort]
-- [ ] [Quick Sort]
+- [ ] [Big O notation](#big-o-notation)
+- [ ] [Java data structures complexity](#java-data-structures-complexity)
+- [ ] [Binary Search](#binary-search)
+- [ ] [Bubble Sort](#buble-sort)
+- [ ] [Insertion Sort](#insertion sort)
+- [ ] [Selection Sort](#selection sort)
+- [ ] [Merge Sort](#merge sort)
+- [ ] [Quick Sort](#quick sort)
 
 ### Patterns
-- [ ] [Singleton]
-- [ ] [Abstract factory]
-- [ ] [Builder]
-- [ ] [Facade]
-- [ ] [Proxy]
-- [ ] [Command]
-- [ ] [Strategy]
+- [ ] [Singleton](#singleton)
+- [ ] [Abstract factory](#abstract-factory)
+- [ ] [Builder](#builder)
+- [ ] [Facade](#facade)
+- [ ] [Proxy](#proxy)
+- [ ] [Command](#command)
+- [ ] [Strategy](#strategy)
 
 ### Principles
-- [ ] [PECS]
-- [ ] [MVC]
-- [ ] [DAO]
-- [ ] [CRUD]
-- [ ] [MVP]
-- [ ] [SOLID]
-- [ ] [ACID]
-- [ ] [IoC]
-- [ ] [DI]
-- [ ] [REST]
-- [ ] [SOAP]
-- [ ] [DTO]
+- [ ] [PECS](#pecs)
+- [ ] [MVC](#mvc)
+- [ ] [DAO](#dao)
+- [ ] [CRUD](#crud)
+- [ ] [MVP](#mvp)
+- [ ] [SOLID](#solid)
+- [ ] [ACID](#acid)
+- [ ] [AOP](#aop)
+- [ ] [IoC](#ioc)
+- [ ] [DI](#di)
+- [ ] [REST](#rest)
+- [ ] [SOAP](#soap)
+- [ ] [DTO](#dto)
 
 ### Frameworks and libs
-- [ ] [JUnit]
-- [ ] [Log4j]
-- [ ] [Lombok]
-- [ ] [Swagger]
-- [ ] [H2]
+- [ ] [JUnit](#junit)
+- [ ] [Log4j](#log4j)
+- [ ] [Lombok](#lombok)
+- [ ] [Swagger](#swagger)
+- [ ] [H2](#h2)
 
 ### Environment
 - [x] [GIT](#git)
 - [x] [Maven](#maven)
-- [ ] [MySQL Workbench]
-- [ ] [Postman]
-- [ ] [Travis]
-- [ ] [SonarQube]
-- [ ] [Heroku]
+- [ ] [MySQL Workbench](#mysql-workbench)
+- [ ] [Postman](#postman)
+- [ ] [Travis](#travis)
+- [ ] [SonarQube](#sonarqube)
+- [ ] [Heroku](#heroku)
 
 ## Java Core
 
@@ -602,7 +604,6 @@ functionality to the user.
  [jenkov.com](http://tutorials.jenkov.com/)
  
  [baeldung.com](https://www.baeldung.com/)
- 
  
  ### git
  [GIT Manual](https://git.github.io/htmldocs/git.html)
