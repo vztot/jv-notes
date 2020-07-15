@@ -7,7 +7,7 @@ These notes was made for better understanding of java
 
 ### Java Core
 - [x] [Java History and Philosophy](#java-history-and-philosophy)
-- [x] [Google Java Style Guide](#google-java-style-guide)
+- [x] [OOP](#oop)
 - [x] [Primitives](#primitives)
 - [ ] [Binary operations](#binary-operations)
 - [x] [Objects](#objects)
@@ -17,7 +17,6 @@ These notes was made for better understanding of java
 - [x] [Arrays](#arrays)
 - [x] [Quick Array To List List To Array Converting](#quick-array-to-list-list-to-array-converting)
 - [x] [String vs StringBuilder vs StringBuffer](#string-vs-stringbuilder-vs-stringbuffer)
-- [x] [OOP](#oop)
 - [ ] [Static Classes](#static-classes)
 - [ ] [Static Methods](#static-methods)
 - [ ] [Static Variables](#static-variables)
@@ -38,13 +37,17 @@ These notes was made for better understanding of java
 - [ ] [LinkedList](#linked-list)
 - [ ] [Stateless class](#stateless-class)
 - [ ] [Immutable class](#immutable-class)
+- [ ] [Map](#map)
 - [ ] [HashMap](#hash-map)
 - [ ] [Comparator](#comparator)
 - [ ] [Iterator](#iterator)
 - [ ] [TreeMap](#tree-map)
 - [ ] [Set](#set)
 - [ ] [TreeSet](#tree-set)
+- [ ] [HashSet](#hash-set)
+- [ ] [LinkedHashSet](#linked-hash-set)
 - [ ] [Queue](#queue)
+- [ ] [Dequeue](#queue)
 - [ ] [Stack](#stack)
 - [ ] [Optional](#optional)
 - [ ] [Anonymous class](#anonymous-class)
@@ -213,6 +216,36 @@ There were five primary goals in the creation of the Java language:
 3. It should contain built-in support for using computer networks.
 4. It should be designed to execute code from remote sources securely.
 5. It should be easy to use by selecting what was considered the good parts of other object-oriented languages.
+
+## oop
+### Fundamentals
+Object-oriented programming is a programming paradigm where everything is represented as an object.
+
+### What Are Objects?
+An object is an entity that has states and behaviors.
+
+### What Are Classes?
+A class is a template or blueprint from which objects are created.
+Classes define states as instance variables and behaviors as instance methods.
+
+### Principles of object-oriented programming
+
+- Encapsulation
+- Inheritance
+- Abstraction
+- Polymorphism
+
+### Encapsulation
+Encapsulation is a process of wrapping code and data together into a single unit.
+
+### Inheritance
+Inheritance is a mechanism in which one object acquires all the states and behaviors of 
+a parent object.
+
+### Abstraction
+Abstraction is a process of hiding the implementation details and showing only
+functionality to the user.
+
 
 ## primitives
 
@@ -560,35 +593,6 @@ version 2 - no performance difference whatsoever.
 >of an expression.
 
 [link](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.18.1)
-
-## oop
-### Fundamentals
-Object-oriented programming is a programming paradigm where everything is represented as an object.
-
-### What Are Objects?
-An object is an entity that has states and behaviors.
-
-### What Are Classes?
-A class is a template or blueprint from which objects are created.
-Classes define states as instance variables and behaviors as instance methods.
-
-### Principles of object-oriented programming
-
-- Encapsulation
-- Inheritance
-- Abstraction
-- Polymorphism
-
-### Encapsulation
-Encapsulation is a process of wrapping code and data together into a single unit.
-
-### Inheritance
-Inheritance is a mechanism in which one object acquires all the states and behaviors of 
-a parent object.
-
-### Abstraction
-Abstraction is a process of hiding the implementation details and showing only
-functionality to the user.
 
  ## advanced
  
