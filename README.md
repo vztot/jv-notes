@@ -635,9 +635,50 @@ true  // same as previous case but .intern() push this string into string pool d
 
 ## string-pool
 
+String Pool — the special memory region where Strings are stored by the JVM.
 
+Thanks to the immutability of Strings in Java, the JVM can optimize the amount of memory allocated 
+for them by storing only one copy of each literal String in the pool. This process is called
+ interning.
+ 
+Let's execute next code:
+```java
+class Test {
+    public static void main(String[] args) {
+        String hello = "Hello";
+        System.out.println(ObjectUtils.identityToString(hello));
+        System.out.println(ObjectUtils.identityToString("Hello"));
+    }
+}
+```
 
+Result of execution:
+```
+java.lang.String@43a25848
+java.lang.String@43a25848
+```
 
+As we can see both strings have same reference. It's because "Hello" is in the pool of
+ strings.
+ 
+ Let's execute another code:
+ ```java
+class Test {
+    public static void main(String[] args) {
+        String hello = new String("Hello");
+        System.out.println(ObjectUtils.identityToString(hello));
+        System.out.println(ObjectUtils.identityToString("Hello"));
+    }
+}
+```
+Result of execution:
+
+```
+java.lang.String@43a25848
+java.lang.String@3ac3fd8b
+```
+
+ References are different because string object is created during runtime
  ## advanced
  
  ### relevant-java-links
