@@ -17,8 +17,9 @@ These notes was made for better understanding of java
 - [x] [Arrays](#arrays)
 - [x] [Quick Array To List List To Array Converting](#quick-array-to-list-list-to-array-converting)
 - [x] [String vs StringBuilder vs StringBuffer](#string-vs-stringbuilder-vs-stringbuffer)
-- [ ] [String pool](#string-vs-stringbuilder-vs-stringbuffer)
-- [ ] [Integer pool](#string-vs-stringbuilder-vs-stringbuffer)
+- [x] [String concatenation](#string-concatenation)
+- [ ] [String pool](#string-pool)
+- [ ] [Integer pool](#integer-pool)
 - [ ] [Memory heap](#memory-heap)
 - [ ] [Memory stack](#memory-stack)
 - [ ] [JMM](#jmm)
@@ -206,6 +207,7 @@ These notes was made for better understanding of java
 - [ ] [Travis](#travis)
 - [ ] [SonarQube](#sonarqube)
 - [ ] [Heroku](#heroku)
+- [ ] [Docker](#docker)
 
 ## Java Core
 
@@ -600,6 +602,41 @@ version 2 - no performance difference whatsoever.
 >of an expression.
 
 [link](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.18.1)
+
+## string-concatenation
+Let's look at the next code:
+```java
+class Test {
+    public static void main(String[] args) {
+        String hello = "Hello", lo = "lo";
+
+        System.out.println(hello == "Hello");
+        System.out.println(Other.hello == hello);
+        System.out.println(hello == ("Hel" + "lo"));
+        System.out.println(hello == ("Hel" + lo));
+        System.out.println(hello == ("Hel" + lo).intern());
+    }
+}
+class Other {
+    static String hello = "Hello";
+}
+
+```
+
+It will display next result:
+
+```
+true  // both strings have same reference because of string pool
+true  // same here
+true  // concatenation "Hel" + "lo" was made during compilation, so this is similar to first case
+false // concatenation made during runtime so ("Hel" + lo) is a new Object and it is not in the pool
+true  // same as previous case but .intern() push this string into string pool during runtime
+```
+
+## string-pool
+
+
+
 
  ## advanced
  
