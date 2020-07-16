@@ -18,7 +18,7 @@ These notes was made for better understanding of java
 - [x] [Quick Array To List List To Array Converting](#quick-array-to-list-list-to-array-converting)
 - [x] [String vs StringBuilder vs StringBuffer](#string-vs-stringbuilder-vs-stringbuffer)
 - [x] [String concatenation](#string-concatenation)
-- [ ] [String pool](#string-pool)
+- [x] [String pool](#string-pool)
 - [ ] [Integer pool](#integer-pool)
 - [ ] [Memory heap](#memory-heap)
 - [ ] [Memory stack](#memory-stack)
