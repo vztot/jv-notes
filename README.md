@@ -8,6 +8,7 @@ These notes was made for better understanding of java
 ### Java Core
 - [x] [Java History and Philosophy](#java-history-and-philosophy)
 - [x] [OOP](#oop)
+- [ ] [JVM JRE JDK](#jvm-jre-jdk)
 - [x] [Primitives](#primitives)
 - [ ] [Binary operations](#binary-operations)
 - [x] [Objects](#objects)
