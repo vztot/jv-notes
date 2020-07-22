@@ -37,8 +37,8 @@ These notes was made for better understanding of java
 - [ ] [Object Class](#object-class)
 - [ ] [RegEx](#regex)
 - [ ] [Cloneable](#clonable)
-- [ ] [Equals](#equals)
-- [ ] [HashCode](#hashcode)
+- [x] [Equals](#equals)
+- [x] [HashCode](#hashcode)
 - [ ] [Generics](#generics)
 - [ ] [Wildcard](#wildcard)
 - [ ] [Collection Framework](#)
@@ -727,18 +727,22 @@ Rules of overwriting:
 ```
     if a.equals(b) is true then b.equals(a) must be true.
 ```
- 4. Transitive
+ 4. Transitive:
 ```
     if a.equals(b) and b.equals(c) is true then c.equals(a) must be true.
 ```
- 5. Consistent
+ 5. Consistent:
 ```
-    multiply invocations of equals() method must return the same value untill any of properties are modified.
+    multiply invocations of equals() method must return the same value 
+    untill any of properties are modified.
 ```
  ## hashcode
  
  Contract between equals and hashCode:
- 1/
+ 1. If two objects are equal, than they must have same hash code.
+ 2. If two objects have the same hash code, they may or may not be equal.
+ 3. If two objects have different hash codes, they must not be equal.
+ 4. Same object should return same shashcode until any of properties are modified.
  
  ## advanced
  
