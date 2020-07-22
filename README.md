@@ -12,6 +12,7 @@ These notes was made for better understanding of java
 - [x] [Primitives](#primitives)
 - [ ] [Binary operations](#binary-operations)
 - [x] [Objects](#objects)
+- [x] [Object class methods](#object-class-methods)
 - [x] [Wrappers](#wrappers)
 - [x] [Conversions](#conversions)
 - [x] [Autoboxing and unboxing](#autoboxing-and-unboxing)
@@ -32,7 +33,6 @@ These notes was made for better understanding of java
 - [ ] [Closeable](#closeable)
 - [ ] [Abstract Class](#abstract-classes)
 - [ ] [Interface](#interface)
-- [ ] [Build Pattern](#build-pattern)
 - [ ] [Java NIO vs IO](#java-nio-vs-io)
 - [ ] [Object Class](#object-class)
 - [ ] [RegEx](#regex)
@@ -296,6 +296,25 @@ Object object = new Object(); // here "object" is a reference to the Object clas
 int[] arr = new int[1]; // here "arr" is a reference to the int array instance
 ```
 
+##object-class-methods
+
+|Modifier and Type|Method|Description|
+ |---|---|---|
+ |protected Object|clone()|Creates and returns a copy of this object.|
+ |boolean|equals​(Object obj)|Indicates whether some other object is "equal to" this one.|
+ |protected void|finalize()|**Deprecated.** The finalization mechanism is inherently problematic.|
+ |Class<?>|getClass()|Returns the runtime class of this Object.|
+ |int|hashCode()|Returns a hash code value for the object.|
+ |void|notify()|Wakes up a single thread that is waiting on this object's monitor.|
+ |void|notifyAll()|Wakes up all threads that are waiting on this object's monitor.|
+ |String|toString()|Returns a string representation of the object.|
+ |void|wait()|Causes the current thread to wait until it is awakened, typically by being notified or interrupted|
+ |void|wait​(long timeoutMillis)|Causes the current thread to wait until it is awakened, typically by being notified or interrupted, or until a certain amount of real time has elapsed.|
+ |void|wait​(long timeoutMillis, int nanos)|Causes the current thread to wait until it is awakened, typically by being notified or interrupted, or until a certain amount of real time has elapsed.|
+
+ **Question**: What methods object class have?
+ 
+ **Answer**: wait, notify, notifyAll, toString, getClass, finalize, clone, equals, hashCode
 ## wrappers
 
 **They're stored in the heap.**
