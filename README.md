@@ -698,7 +698,48 @@ java.lang.String@43a25848
 java.lang.String@3ac3fd8b
 ```
 
- References are different because string object is created during runtime
+ References are different because string object is created during runtime.
+ 
+## equals
+
+Default implementation (in Object class):
+
+```java
+    public boolean equals(Object obj) {
+        return (this == obj);
+    }
+```
+
+Rules of overwriting:
+ 1. Reflection:
+```java
+    if (this == object) {
+        return true;
+    }
+```
+ 2. Null check:
+```java
+    if (object == null) {
+        return false;
+    }
+```
+ 3. Symmetric:
+```
+    if a.equals(b) is true then b.equals(a) must be true.
+```
+ 4. Transitive
+```
+    if a.equals(b) and b.equals(c) is true then c.equals(a) must be true.
+```
+ 5. Consistent
+```
+    multiply invocations of equals() method must return the same value untill any of properties are modified.
+```
+ ## hashcode
+ 
+ Contract between equals and hashCode:
+ 1/
+ 
  ## advanced
  
  ### relevant-java-links
