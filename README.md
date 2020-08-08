@@ -744,6 +744,26 @@ Rules of overwriting:
  3. If two objects have different hash codes, they must not be equal.
  4. Same object should return same shashcode until any of properties are modified.
  
+ ## collection-framework
+ 
+ The Collection in Java is a framework (since 1.2) that provides an architecture to store and
+  manipulate the group of objects. It was extended in 1.5 (Generics) and 1.8 (Streams).
+ 
+ On top of the Collection API hierarchy we can see interfaces Collection and Map. Division was
+  made because Map should contain pair of keys and values while collection can store only values.
+  
+ In collection framework we should talk about `List`, `Queue`, `Dequeue`, `Set`, `Map` interfaces and their
+  implementations.
+ 
+ `List` implementations: `ArrayList`, `LinkedList`, `Vector`
+ 
+ `Queue`, `Deque` implementations: `ArrayDeque`, `LinkedList`
+ 
+ `Set` implementations: `HashSet`, `LinkedHashSet`, `TreeSet`
+ 
+ `Map` implementations: `LinkedHashMap`, `HashMap`, `TreeMap`, `Hashtable`
+ 
+ 
  ## advanced
  
  ### relevant-java-links
@@ -806,3 +826,5 @@ Rules of overwriting:
  
  ### google-java-style-guide
  [Manual](https://google.github.io/styleguide/javaguide.html)
+
+**
